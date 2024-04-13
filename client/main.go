@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"log"
 	"net/http"
 	pb "root/proto/out"
 
@@ -21,7 +20,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	log.Printf("server listening at 8081")
+
 	if err := http.ListenAndServe(":8081", mux); err != nil {
 		panic(err)
 	}
